@@ -1,0 +1,14 @@
+{
+  "name": "CS:GO Stats Dashboard",
+  "description": "A dashboard where you can see your stats for Counter-Strike: Global Offensive",
+  "image": "heroku/python",
+  "repository": "https://github.com/Paulinakhew/csgo_stats_tracker",
+  "keywords": ["python", "flask" ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "pytest"
+      }
+    }
+  }
+}
