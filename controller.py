@@ -14,7 +14,3 @@ app = Flask(__name__)
 def dashboard():
     data = requests.get("https://public-api.tracker.gg/v2/csgo/standard/profile/steam/76561199056418213", headers=headers).json()
     return render_template('dashboard.html', data=data)
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
