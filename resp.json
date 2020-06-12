@@ -1,0 +1,394 @@
+{
+   "data":{
+      "platformInfo":{
+         "platformSlug":"steam",
+         "platformUserId":"76561199056418213",
+         "platformUserHandle":"khewtiepie",
+         "platformUserIdentifier":"76561199056418213",
+         "avatarUrl":"https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/0a/0a42ef1c8db95bee925519f668ee36540981ce36_full.jpg",
+         "additionalParameters":"None"
+      },
+      "userInfo":{
+         "userId":"None",
+         "isPremium":False,
+         "isVerified":False,
+         "isInfluencer":False,
+         "countryCode":"CA",
+         "customAvatarUrl":"None",
+         "customHeroUrl":"None",
+         "socialAccounts":"None"
+      },
+      "metadata":{
+
+      },
+      "segments":[
+         {
+            "type":"overview",
+            "attributes":{
+
+            },
+            "metadata":{
+               "name":"Lifetime"
+            },
+            "expiryDate":"2020-06-11T03:48:55.2352559+00:00",
+            "stats":{
+               "timePlayed":{
+                  "rank":"None",
+                  "percentile":9.0,
+                  "displayName":"Time Played",
+                  "displayCategory":"General",
+                  "category":"general",
+                  "metadata":{
+
+                  },
+                  "value":161594,
+                  "displayValue":"1d 20h 53m",
+                  "displayType":"TimeSeconds"
+               },
+               "score":{
+                  "rank":"None",
+                  "percentile":2.0,
+                  "displayName":"Score",
+                  "displayCategory":"General",
+                  "category":"general",
+                  "metadata":{
+
+                  },
+                  "value":2228,
+                  "displayValue":"2,228",
+                  "displayType":"Number"
+               },
+               "kills":{
+                  "rank":"None",
+                  "percentile":14.0,
+                  "displayName":"Kills",
+                  "displayCategory":"Combat",
+                  "category":"combat",
+                  "metadata":{
+
+                  },
+                  "value":4250,
+                  "displayValue":"4,250",
+                  "displayType":"Number"
+               },
+               "deaths":{
+                  "rank":"None",
+                  "percentile":15.0,
+                  "displayName":"Deaths",
+                  "displayCategory":"Combat",
+                  "category":"combat",
+                  "metadata":{
+
+                  },
+                  "value":4383,
+                  "displayValue":"4,383",
+                  "displayType":"Number"
+               },
+               "kd":{
+                  "rank":"None",
+                  "percentile":30.0,
+                  "displayName":"K/D",
+                  "displayCategory":"Combat",
+                  "category":"combat",
+                  "metadata":{
+
+                  },
+                  "value":0.9696554871092858,
+                  "displayValue":"0.97",
+                  "displayType":"NumberPrecision2"
+               },
+               "damage":{
+                  "rank":"None",
+                  "percentile":13.0,
+                  "displayName":"Damage",
+                  "displayCategory":"Combat",
+                  "category":"combat",
+                  "metadata":{
+
+                  },
+                  "value":561391,
+                  "displayValue":"561,391",
+                  "displayType":"Number"
+               },
+               "headshots":{
+                  "rank":"None",
+                  "percentile":17.0,
+                  "displayName":"Headshots",
+                  "displayCategory":"Combat",
+                  "category":"combat",
+                  "metadata":{
+
+                  },
+                  "value":1729,
+                  "displayValue":"1,729",
+                  "displayType":"Number"
+               },
+               "dominations":{
+                  "rank":"None",
+                  "percentile":48.0,
+                  "displayName":"Dominations",
+                  "displayCategory":"Combat",
+                  "category":"combat",
+                  "metadata":{
+
+                  },
+                  "value":148,
+                  "displayValue":"148",
+                  "displayType":"Number"
+               },
+               "shotsFired":{
+                  "rank":"None",
+                  "percentile":20.0,
+                  "displayName":"Shots Fired",
+                  "displayCategory":"Combat",
+                  "category":"combat",
+                  "metadata":{
+
+                  },
+                  "value":112312,
+                  "displayValue":"112,312",
+                  "displayType":"Number"
+               },
+               "shotsHit":{
+                  "rank":"None",
+                  "percentile":18.0,
+                  "displayName":"Shots Hit",
+                  "displayCategory":"Combat",
+                  "category":"combat",
+                  "metadata":{
+
+                  },
+                  "value":19830,
+                  "displayValue":"19,830",
+                  "displayType":"Number"
+               },
+               "shotsAccuracy":{
+                  "rank":"None",
+                  "percentile":23.0,
+                  "displayName":"Shots Accuracy",
+                  "displayCategory":"Combat",
+                  "category":"combat",
+                  "metadata":{
+
+                  },
+                  "value":17.656172092029347,
+                  "displayValue":"17.7%",
+                  "displayType":"NumberPercentage"
+               },
+               "snipersKilled":{
+                  "rank":"None",
+                  "percentile":13.0,
+                  "displayName":"Snipers Killed",
+                  "displayCategory":"Combat",
+                  "category":"combat",
+                  "metadata":{
+
+                  },
+                  "value":343,
+                  "displayValue":"343",
+                  "displayType":"Number"
+               },
+               "dominationOverkills":{
+                  "rank":"None",
+                  "percentile":40.0,
+                  "displayName":"Domination Overkills",
+                  "displayCategory":"Combat",
+                  "category":"combat",
+                  "metadata":{
+
+                  },
+                  "value":106,
+                  "displayValue":"106",
+                  "displayType":"Number"
+               },
+               "dominationRevenges":{
+                  "rank":"None",
+                  "percentile":55.0,
+                  "displayName":"Domination Revenges",
+                  "displayCategory":"Combat",
+                  "category":"combat",
+                  "metadata":{
+
+                  },
+                  "value":82,
+                  "displayValue":"82",
+                  "displayType":"Number"
+               },
+               "bombsPlanted":{
+                  "rank":"None",
+                  "percentile":7.0,
+                  "displayName":"Bombs Planted",
+                  "displayCategory":"Objective",
+                  "category":"objective",
+                  "metadata":{
+
+                  },
+                  "value":56,
+                  "displayValue":"56",
+                  "displayType":"Number"
+               },
+               "bombsDefused":{
+                  "rank":"None",
+                  "percentile":1.0,
+                  "displayName":"Bombs Defused",
+                  "displayCategory":"Objective",
+                  "category":"objective",
+                  "metadata":{
+
+                  },
+                  "value":1,
+                  "displayValue":"1",
+                  "displayType":"Number"
+               },
+               "moneyEarned":{
+                  "rank":"None",
+                  "percentile":4.0,
+                  "displayName":"Money Earned",
+                  "displayCategory":"Objective",
+                  "category":"objective",
+                  "metadata":{
+
+                  },
+                  "value":2125550,
+                  "displayValue":"2,125,550",
+                  "displayType":"Number"
+               },
+               "hostagesRescued":{
+                  "rank":"None",
+                  "percentile":"None",
+                  "displayName":"Hostages Rescued",
+                  "displayCategory":"Objective",
+                  "category":"objective",
+                  "metadata":{
+
+                  },
+                  "value":0,
+                  "displayValue":"0",
+                  "displayType":"Number"
+               },
+               "mvp":{
+                  "rank":"None",
+                  "percentile":2.0,
+                  "displayName":"MVP",
+                  "displayCategory":"Objective",
+                  "category":"objective",
+                  "metadata":{
+
+                  },
+                  "value":46,
+                  "displayValue":"46",
+                  "displayType":"Number"
+               },
+               "wins":{
+                  "rank":"None",
+                  "percentile":20.0,
+                  "displayName":"Wins",
+                  "displayCategory":"Round",
+                  "category":"round",
+                  "metadata":{
+
+                  },
+                  "value":140,
+                  "displayValue":"140",
+                  "displayType":"Number"
+               },
+               "ties":{
+                  "rank":"None",
+                  "percentile":"None",
+                  "displayName":"Ties",
+                  "displayCategory":"Round",
+                  "category":"round",
+                  "metadata":{
+
+                  },
+                  "value":0,
+                  "displayValue":"0",
+                  "displayType":"Number"
+               },
+               "matchesPlayed":{
+                  "rank":"None",
+                  "percentile":27.0,
+                  "displayName":"Matches Played",
+                  "displayCategory":"Round",
+                  "category":"round",
+                  "metadata":{
+
+                  },
+                  "value":519,
+                  "displayValue":"519",
+                  "displayType":"Number"
+               },
+               "losses":{
+                  "rank":"None",
+                  "percentile":"None",
+                  "displayName":"Losses",
+                  "displayCategory":"Round",
+                  "category":"round",
+                  "metadata":{
+
+                  },
+                  "value":379,
+                  "displayValue":"379",
+                  "displayType":"Number"
+               },
+               "roundsPlayed":{
+                  "rank":"None",
+                  "percentile":6.0,
+                  "displayName":"Rounds Played",
+                  "displayCategory":"Round",
+                  "category":"round",
+                  "metadata":{
+
+                  },
+                  "value":1154,
+                  "displayValue":"1,154",
+                  "displayType":"Number"
+               },
+               "roundsWon":{
+                  "rank":"None",
+                  "percentile":20.0,
+                  "displayName":"Rounds Won",
+                  "displayCategory":"Round",
+                  "category":"round",
+                  "metadata":{
+
+                  },
+                  "value":140,
+                  "displayValue":"140",
+                  "displayType":"Number"
+               },
+               "wlPercentage":{
+                  "rank":"None",
+                  "percentile":6.0,
+                  "displayName":"Win %",
+                  "displayCategory":"Round",
+                  "category":"round",
+                  "metadata":{
+
+                  },
+                  "value":27.0,
+                  "displayValue":"27.0%",
+                  "displayType":"NumberPercentage"
+               },
+               "headshotPct":{
+                  "rank":"None",
+                  "percentile":71.0,
+                  "displayName":"Headshot %",
+                  "displayCategory":"Combat",
+                  "category":"combat",
+                  "metadata":{
+
+                  },
+                  "value":40.7,
+                  "displayValue":"40.7%",
+                  "displayType":"NumberPercentage"
+               }
+            }
+         }
+      ],
+      "availableSegments":[
+
+      ],
+      "expiryDate":"2020-06-11T03:48:55.2352559+00:00"
+   }
+}
