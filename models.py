@@ -9,10 +9,17 @@ def process_json_data(data):
         'kills': stats['kills']['value'],
         'deaths': stats['deaths']['value'],
         'kd': round(stats['kd']['value'], 2),
-        'wl': stats['wlPercentage']['value'],
-        'kd_percentile': stats['kd']['percentile'],
         'kd_total': round(stats['kd']['value'], 2) + 1.00,
-        'kd_fraction': round(stats['kd']['value'] / (stats['kd']['value'] + 1.00), 2) * 100
+        'kd_fraction': round(stats['kd']['value'] / (stats['kd']['value'] + 1.00), 2) * 100,
+        'wins': stats['wins']['value'],
+        'losses': stats['losses']['value'],
+        'headshots': stats['headshots']['value'],
+        'headshotpct': stats['headshotPct']['value'],
+        'headshot_percentile': stats['headshotPct']['percentile'],
+        'kd_percentile': stats['kd']['percentile'],
+        'wl_percentage': stats['wlPercentage']['value'],
+        'wl_percentile': stats['wlPercentage']['percentile']
+
     }
 
     return return_dict
