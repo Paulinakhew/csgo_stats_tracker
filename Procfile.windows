@@ -1,1 +1,1 @@
-web: python3 controller.py runserver 0.0.0.0:5000
+web: python3 wsgi.py runserver 0.0.0.0:5000
