@@ -1,8 +1,86 @@
+
+
 <!DOCTYPE html>
 <html>
     <head>
-
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     </head>
     <body>
-        {{data}}
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="static/icon.png" height="50px" width="50px">
+                    <a class="navbar-brand" href="https://steamcommunity.com/profiles/76561199056418213/">
+                        {{ data['username'] }}'s CS:GO Stats
+                    </a>
+                </div>
+            </nav>
+            <div class="container-fluid">
+                <div class="col col-md-3">			
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-controls="collapse1">
+                                General Stats</a>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in">
+                                <ul class="list-group">
+                                    <li class="list-group-item"><span class="badge">{{ data['time_played'] }}</span> Time Played</li>
+                                    <li class="list-group-item"><span class="badge">{{ data['kills'] }}</span>Kills</li>
+                                    <li class="list-group-item"><span class="badge">{{ data['deaths'] }}</span>Deaths</li>
+                                    <li class="list-group-item"><span class="badge">{{ data['kd'] }}</span>Kills / Deaths Ratio</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col col-md-9">
+                    <div class="row">
+                        <div class="col col-md-5">
+                            <h4>Value:</h4>
+                                Kills / Deaths<span class="pull-right strong">{{ data['kills'] }} K / {{ data['deaths'] }} D</span>
+                                    <div class="progress">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{ data['kd_fraction'] }}"aria-valuemin="0" aria-valuemax={{ data['kd_total'] }} style="width:{{data['kd_fraction']}}%">{{data['kd_fraction']}}% kills</div>
+                                </div>
+                                Wins / Losses<span class="pull-right strong">{{ data['wins'] }} W / {{ data['losses'] }} L</span>
+                                    <div class="progress">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow={{ data['wl_percentage'] }} aria-valuemin="0" aria-valuemax="100" style="width:{{ data['wl_percentage'] }}%">{{ data['wl_percentage'] }}%</div>
+                                </div>
+                                Headshot Percentage<span class="pull-right strong">{{ data['headshots'] }} headshots</span>
+                                    <div class="progress">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{ data['headshotpct'] }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ data['headshotpct'] }}%">{{ data['headshotpct'] }}%</div>
+                                </div>
+                        </div>
+                        <div class="col col-md-5">
+                            <h4>Percentiles:</h4>
+                                Kills / Deaths<span class="pull-right strong">{{ data['kd_percentile'] }} percentile</span>
+                                    <div class="progress">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow={{ data['kd_percentile'] }} aria-valuemin="0" aria-valuemax="100" style="width:{{data['kd_percentile']}}%"></div>
+                                </div>
+                            
+                                Wins / Losses<span class="pull-right strong">{{ data['wl_percentile'] }} percentile</span>
+                                    <div class="progress">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ data['wl_percentile'] }}"aria-valuemin="0" aria-valuemax="100" style="width:{{ data['wl_percentile'] }}%"></div>
+                                </div>
+                            
+                                Headshots<span class="pull-right strong">{{ data['headshot_percentile'] }} percentile</span>
+                                    <div class="progress">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow={{ data['headshot_percentile'] }} aria-valuemin="0" aria-valuemax="100" style="width:{{ data['headshot_percentile'] }}%"></div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </body>
+</html>
