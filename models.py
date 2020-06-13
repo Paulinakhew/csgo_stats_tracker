@@ -1,3 +1,13 @@
+import os
+import requests
+from dotenv import load_dotenv
+
+
+load_dotenv()
+API_KEY = os.environ.get("API_KEY")
+headers = {'TRN-Api-Key': API_KEY}
+
+
 def process_json_data(data):
     platforminfo = data['platformInfo']
     stats = data['segments'][0]['stats']
@@ -19,7 +29,15 @@ def process_json_data(data):
         'kd_percentile': stats['kd']['percentile'],
         'wl_percentage': stats['wlPercentage']['value'],
         'wl_percentile': stats['wlPercentage']['percentile']
-
     }
 
     return return_dict
+
+
+def request_tracker_network_api(steam_id=76561199056418213):
+    resp = requests.get(
+        url=f"https://public-api.tracker.gg/v2/csgo/standard/profile/steam/{steam_id}",
+        headers=headers
+    )
+
+    return resp
