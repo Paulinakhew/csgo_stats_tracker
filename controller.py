@@ -10,9 +10,7 @@ def dashboard():
     resp = m.request_tracker_network_api()
 
     data = resp.json()['data']
-
     return_dict = m.process_json_data(data=data)
-
     return render_template('dashboard.html', data=return_dict)
 
 
@@ -22,9 +20,7 @@ def user_dashboard(steam_id):
 
     if resp.status_code == 200:
         data = resp.json()['data']
-
         return_dict = m.process_json_data(data=data)
-
         return render_template('dashboard.html', data=return_dict)
     else:
         return redirect('/')
