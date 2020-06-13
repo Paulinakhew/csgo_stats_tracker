@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 API_KEY = os.environ.get("API_KEY")
 headers = {'TRN-Api-Key': API_KEY}
+STEAM_WEB_API_KEY = os.environ.get("STEAM_WEB_API_KEY")
 
 
 def process_json_data(data):
@@ -36,8 +37,16 @@ def process_json_data(data):
 
 def request_tracker_network_api(steam_id=76561199056418213):
     resp = requests.get(
-        url=f"https://public-api.tracker.gg/v2/csgo/standard/profile/steam/{steam_id}",
+        url=f'https://public-api.tracker.gg/v2/csgo/standard/profile/steam/{steam_id}',
         headers=headers
+    )
+
+    return resp
+
+
+def request_steam_csgo_stats(steam_id=76561199056418213):
+    resp = requests.get(
+        url=f'http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=730&key={STEAM_WEB_API_KEY}&steamid={steam_id}'
     )
 
     return resp

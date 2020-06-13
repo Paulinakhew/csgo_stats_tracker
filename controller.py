@@ -8,10 +8,15 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def dashboard():
     resp = m.request_tracker_network_api()
+    steam_resp = m.request_steam_csgo_stats()
 
     data = resp.json()['data']
     return_dict = m.process_json_data(data=data)
-    return render_template('dashboard.html', data=return_dict)
+    return render_template(
+        'dashboard.html',
+        data=return_dict,
+        steam_data=steam_resp.json()
+    )
 
 
 @app.route('/<steam_id>')
