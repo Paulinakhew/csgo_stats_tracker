@@ -15,7 +15,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <!-- <img src="static/icon.png" height="50px" width="50px"> -->
+                    {% if data['username'] == 'khewtiepie' %}
+                        <img src="static/icon.png" height="50px" width="50px">
+                    {% endif %}
                     <a class="navbar-brand" href="https://steamcommunity.com/profiles/76561199056418213/">
                         {{ data['username'] }}'s CS:GO Stats
                     </a>
