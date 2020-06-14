@@ -46,18 +46,36 @@
                     <div class="row">
                         <div class="col col-md-5">
                             <h4>Value:</h4>
-                                Kills / Deaths<span class="pull-right strong">{{ data['kills'] }} K / {{ data['deaths'] }} D</span>
-                                    <div class="progress">
-                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{ data['kd_fraction'] }}"aria-valuemin="0" aria-valuemax={{ data['kd_total'] }} style="width:{{data['kd_fraction']}}%">{{data['kd_fraction']}}% kills</div>
-                                </div>
-                                Wins / Losses<span class="pull-right strong">{{ data['wins'] }} W / {{ data['losses'] }} L</span>
-                                    <div class="progress">
-                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow={{ data['wl_percentage'] }} aria-valuemin="0" aria-valuemax="100" style="width:{{ data['wl_percentage'] }}%">{{ data['wl_percentage'] }}%</div>
-                                </div>
-                                Headshot Percentage<span class="pull-right strong">{{ data['headshots'] }} headshots</span>
-                                    <div class="progress">
+                            Kills / Deaths<span class="pull-right strong">{{ data['kills'] }} K / {{ data['deaths'] }} D</span>
+                            <div class="progress">
+                                {% if data['kd_fraction'] >= 40 %}
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ data['kd_fraction'] }}"aria-valuemin="0" aria-valuemax="100" style="width:{{data['kd_fraction']}}%">{{data['kd_fraction']}}% kills</div>
+                                {% elif data['kd_fraction'] < 40 and data['kd_fraction'] > 15 %}
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{ data['kd_fraction'] }}"aria-valuemin="0" aria-valuemax="100" style="width:{{data['kd_fraction']}}%">{{data['kd_fraction']}}% kills</div>
+                                {% else %}
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{ data['kd_fraction'] }}"aria-valuemin="0" aria-valuemax="100" style="width:{{data['kd_fraction']}}%">{{data['kd_fraction']}}% kills</div>
+                                {% endif %}
+                            </div>
+                            Wins / Losses<span class="pull-right strong">{{ data['wins'] }} W / {{ data['losses'] }} L</span>
+                            <div class="progress">
+                                {% if data['wl_percentage'] >= 40 %}
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ data['wl_percentage'] }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ data['wl_percentage'] }}%">{{ data['wl_percentage'] }}%</div>
+                                {% elif data['wl_percentage'] < 40 and data['wl_percentage'] > 15 %}
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{ data['wl_percentage'] }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ data['wl_percentage'] }}%">{{ data['wl_percentage'] }}%</div>
+                                {% else %}
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{ data['wl_percentage'] }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ data['wl_percentage'] }}%">{{ data['wl_percentage'] }}%</div>
+                                {% endif %}
+                            </div>
+                            Headshot Percentage<span class="pull-right strong">{{ data['headshots'] }} headshots</span>
+                            <div class="progress">
+                                {% if data['headshotpct'] >= 40 %}
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{ data['headshotpct'] }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ data['headshotpct'] }}%">{{ data['headshotpct'] }}%</div>
+                                {% elif data['headshotpct'] < 40 and data['headshotpct'] > 15 %}
                                     <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{ data['headshotpct'] }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ data['headshotpct'] }}%">{{ data['headshotpct'] }}%</div>
-                                </div>
+                                {% else %}
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{ data['headshotpct'] }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ data['headshotpct'] }}%">{{ data['headshotpct'] }}%</div>
+                                {% endif %}
+                            </div>
                         </div>
                         <div class="col col-md-5">
                             <h4>Percentiles:</h4>
