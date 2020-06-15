@@ -11,7 +11,7 @@ def dashboard():
 
     data = resp.json()['data']
     return_dict = m.process_json_data(data=data)
-    return render_template('dashboard.html', data=return_dict)
+    return render_template('dashboard.html', data=return_dict, steam_id=76561199056418213)
 
 
 @app.route('/<steam_id>')
@@ -21,7 +21,7 @@ def user_dashboard(steam_id):
     if resp.status_code == 200:
         data = resp.json()['data']
         return_dict = m.process_json_data(data=data)
-        return render_template('dashboard.html', data=return_dict)
+        return render_template('dashboard.html', data=return_dict, steam_id=steam_id)
     else:
         return redirect('/')
 
