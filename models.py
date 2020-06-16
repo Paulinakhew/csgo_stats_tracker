@@ -11,7 +11,6 @@ headers = {'TRN-Api-Key': API_KEY}
 def process_json_data(data):
     platforminfo = data['platformInfo']
     stats = data['segments'][0]['stats']
-    print(stats['wlPercentage']['value'])
 
     return_dict = {
         'avatar_url': platforminfo['avatarUrl'],
