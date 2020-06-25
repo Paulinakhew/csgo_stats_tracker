@@ -18,7 +18,6 @@ def dashboard():
         steam_data=steam_resp.json()
     )
 
-
 @app.route('/<steam_id>')
 def user_dashboard(steam_id):
     resp = m.request_tracker_network_api(steam_id=steam_id)
