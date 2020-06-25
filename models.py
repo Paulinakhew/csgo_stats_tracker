@@ -50,3 +50,8 @@ def request_steam_csgo_stats(steam_id=76561199056418213):
     )
 
     return resp
+
+
+def process_steam_json_data(data):
+    player_stats = data['playerstats']
+    return player_stats
