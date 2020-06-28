@@ -4,44 +4,31 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
-API_KEY = os.environ.get("API_KEY")
-headers = {'TRN-Api-Key': API_KEY}
 STEAM_WEB_API_KEY = os.environ.get("STEAM_WEB_API_KEY")
 
 
 def process_json_data(data):
-    platforminfo = data['platformInfo']
-    stats = data['segments'][0]['stats']
-
+    stats = data['playerstats']['stats']
+    kills = stats[0]['value']
+    deaths = stats[1]['value']
     return_dict = {
-        'avatar_url': platforminfo['avatarUrl'],
-        'username': platforminfo['platformUserHandle'],
-        'time_played': stats['timePlayed']['displayValue'],
-        'kills': stats['kills']['value'],
-        'deaths': stats['deaths']['value'],
-        'kd': round(stats['kd']['value'], 2),
-        'kd_total': round(stats['kd']['value'], 2) + 1.00,
-        'kd_fraction': round(stats['kd']['value'] / (stats['kd']['value'] + 1.00), 2) * 100,
-        'wins': stats['wins']['value'],
-        'losses': stats['losses']['value'],
-        'headshots': stats['headshots']['value'],
-        'headshotpct': stats['headshotPct']['value'],
-        'headshot_percentile': stats['headshotPct']['percentile'],
-        'kd_percentile': stats['kd']['percentile'],
-        'wl_percentage': stats['wlPercentage']['value'],
-        'wl_percentile': stats['wlPercentage']['percentile']
+        'avatar_url': None,
+        'username': None,
+        'time_played': stats[2]['value'],
+        'kills': kills,
+        'deaths': deaths,
+        'kd': round(kills / deaths, 2),
+        'kd_total': None,
+        'kd_fraction': None,
+        'wins': stats[5]['value'],
+        'headshots': None,
+        'headshotpct': None,
+        'headshot_percentile': None,
+        'kd_percentile': None,
+        'wl_percentage': None,
+        'wl_percentile': None
     }
-
     return return_dict
-
-
-def request_tracker_network_api(steam_id=76561199056418213):
-    resp = requests.get(
-        url=f'https://public-api.tracker.gg/v2/csgo/standard/profile/steam/{steam_id}',
-        headers=headers
-    )
-
-    return resp
 
 
 def request_steam_csgo_stats(steam_id=76561199056418213):
@@ -50,8 +37,3 @@ def request_steam_csgo_stats(steam_id=76561199056418213):
     )
 
     return resp
-
-
-def process_steam_json_data(data):
-    player_stats = data['playerstats']
-    return player_stats
