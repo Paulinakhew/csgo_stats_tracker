@@ -51,12 +51,12 @@
                 <div class="col col-md-9">
                     <div class="row">
                         <div class="col col-md-5">
-                            <h4>Value:</h4>
-                            Kills / Deaths<span class="pull-right strong">{{ data['kills'] }} K / {{ data['deaths'] }} D</span>
+                            <!-- <h4>Value:</h4> -->
+                            Kills / Deaths
                             <div class="progress">
-                                {% if data['kd_fraction'] >= 40 %}
+                                {% if data['kd_fraction'] >= 50 %}
                                     <div class="progress-bar bg-success" role="progressbar" aria-valuenow="{{ data['kd_fraction'] }}"aria-valuemin="0" aria-valuemax="100" style="width:{{data['kd_fraction']}}%">{{data['kd_fraction']}}% kills</div>
-                                {% elif data['kd_fraction'] < 40 and data['kd_fraction'] > 15 %}
+                                {% elif data['kd_fraction'] < 50 and data['kd_fraction'] > 15 %}
                                     <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="{{ data['kd_fraction'] }}"aria-valuemin="0" aria-valuemax="100" style="width:{{data['kd_fraction']}}%">{{data['kd_fraction']}}% kills</div>
                                 {% else %}
                                     <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="{{ data['kd_fraction'] }}"aria-valuemin="0" aria-valuemax="100" style="width:{{data['kd_fraction']}}%">{{data['kd_fraction']}}% kills</div>
