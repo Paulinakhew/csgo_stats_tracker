@@ -1,5 +1,6 @@
 import os
 import requests
+import datetime
 from dotenv import load_dotenv
 
 
@@ -13,10 +14,11 @@ def process_json_data(csgo_data, player_data):
     kills = stats[0]['value']
     deaths = stats[1]['value']
     kd = round(kills / deaths, 2)
+    time_played = str(datetime.timedelta(seconds=stats[2]['value']))
     return_dict = {
         'avatar_url': player_data['avatar'],
         'username': player_data['personaname'],
-        'time_played': stats[2]['value'],
+        'time_played': time_played,
         'kills': kills,
         'deaths': deaths,
         'kd': kd,
